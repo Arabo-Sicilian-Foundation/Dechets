@@ -6,6 +6,7 @@ class Dechet
 {
 public:
 	Dechet();
+
 	~Dechet();
 
 	int getPoids() const { return poids; }
@@ -29,6 +30,12 @@ private:
 	bool styromousse;
 	bool rigide;
 	int idCourant;
+
+	void setPoids(int poids) { this->poids = poids; }
+	void setDescription(std::string description) { this->description = description; }
+	void setType(int type) { this - type = type; }
+	void setCouleur(std::string couleur) { this->couleur = couleur; }
+	void setPurete(int purete) { this->purete = purete; }
 
 };
 
