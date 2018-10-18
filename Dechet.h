@@ -4,39 +4,57 @@
 #include <string>
 class Dechet
 {
-public:
-	Dechet();
-
-	~Dechet();
-
-	int getPoids() const { return poids; }
-	int getId() const { return id; }
-	std::string getDescription() const { return description; }
-	int getType() const { return type; }
-	int getCouleur() const { return couleur; }
-	Materiel getMateriel() const { return materiel; }
-	int getPurete() const { return purete; }
-	bool estEnStyromousse() const { return styromousse; }
-	bool estRigide() const { return rigide; }
-
 private:
+	enum Materiel
+	{
+		CARTON,
+		BOUTEILLE,
+		PLASTIQUE,
+		METAL,
+		BOIS,
+		NOURRITURE,
+		VEGETAL,
+		PAPIER,
+		STYROMOAF,
+		INCONNU
+	};
+
 	int poids;
 	int id;
 	std::string description;
 	int type;
 	std::string couleur;
 	Materiel materiel;
-	iint purete;
+	int purete;
 	bool styromousse;
 	bool rigide;
-	int idCourant;
+	static int idCourant;
 
-	void setPoids(int poids) { this->poids = poids; }
-	void setDescription(std::string description) { this->description = description; }
-	void setType(int type) { this - type = type; }
-	void setCouleur(std::string couleur) { this->couleur = couleur; }
-	void setPurete(int purete) { this->purete = purete; }
+	void setPoids(int poids);
+	void setDescription(std::string description);
+	void setType(int type);
+	void setCouleur(std::string couleur);
+	void setPurete(int purete);
 
+public:
+	Dechet();
+	~Dechet();
+
+	int getPoids() const { return poids; }
+	int getId() const { return id; }
+	std::string getDescription() const { return description; }
+	int getType() const { return type; }
+	std::string getCouleur() const { return couleur; }
+	Materiel getMateriel() const { return materiel; }
+	int getPurete() const { return purete; }
+	bool estEnStyromousse() const { return styromousse; }
+	bool estRigide() const { return rigide; }
+
+protected:
+	Dechet(int poids, std::string description, int type, std::string couleur, Materiel materiel, int purete, bool estEnStyromousse, bool rigide);
+	Dechet(int poids, std::string description);
 };
+
+int Dechet::idCourant = 0;
 
 #endif
