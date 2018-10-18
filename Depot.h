@@ -1,6 +1,11 @@
 #ifndef DEPOT_H
 #define DEPOT_H
 
+#include "Camion.h"
+#include "CamionBleu.h"
+#include "CamionBrun.h"
+#include "CamionVert.h"
+
 class Depot
 {
 public:

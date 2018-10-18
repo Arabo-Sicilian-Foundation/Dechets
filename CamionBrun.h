@@ -1,5 +1,9 @@
-#pragma once
+#ifndef CAMIONBRUN_H
+#define CAMIONBRUN_H
+
 #include "Camion.h"
+#include "DechetTraiteCompostable.h"
+
 class CamionBrun :
 	public Camion
 {
@@ -9,3 +13,4 @@ public:
 	bool ajouterDechetTraite(DechetTraiteCompostable* _dechetTraite);
 };
 
+#endif
