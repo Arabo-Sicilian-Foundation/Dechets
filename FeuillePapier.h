@@ -1,6 +1,8 @@
 #ifndef FEUILLEPAPIER
 #define FEUILLEPAPIER
 
+#include "Dechet.h"
+
 class FeuillePapier:
 	public Dechet
 {

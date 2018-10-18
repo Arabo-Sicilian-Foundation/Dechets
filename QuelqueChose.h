@@ -1,6 +1,8 @@
 #ifndef QQCH
 #define QQCH
 
+#include "Dechet.h"
+
 class QuelqueChose :
 	public Dechet
 {

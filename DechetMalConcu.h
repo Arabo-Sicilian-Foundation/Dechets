@@ -1,6 +1,8 @@
 #ifndef DECHETMALCONCU
 #define DECHETMALCONCU
 
+#include "Dechet.h"
+
 class DechetMalConcu :
 	public Dechet
 {

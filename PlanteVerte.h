@@ -1,6 +1,8 @@
 #ifndef PLANTEVERTE
 #define PLANTEVERTE
 
+#include "Dechet.h"
+
 class PlanteVerte :
 	public Dechet
 {

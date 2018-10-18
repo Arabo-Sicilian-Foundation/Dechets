@@ -1,6 +1,8 @@
 #ifndef BOITECARTON
 #define BOITECARTON
 
+#include "Dechet.h"
+
 class BoiteCarton:
 	public Dechet
 {
@@ -19,3 +21,5 @@ BoiteCarton::BoiteCarton()
 BoiteCarton::~BoiteCarton()
 {
 }
+
+#endif

@@ -1,6 +1,8 @@
 #ifndef VERRECAFE
 #define VERRECAFE
 
+#include "Dechet.h"
+
 class VerreCafe :
 	public Dechet
 {

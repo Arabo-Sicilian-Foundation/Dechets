@@ -1,6 +1,8 @@
 #ifndef SACCHIPS
 #define SACCHIPS
 
+#include "Dechet.h"
+
 class SacChips :
 	public Dechet
 {
