@@ -10,7 +10,7 @@ class CamionBleu :
 public:
 	CamionBleu();
 	~CamionBleu();
-	bool ajouterDechet(DechetTraiteRecyclable _dechetTraite);
+	bool ajouterDechet(DechetTraiteRecyclable* _dechetTraite);
 };
 
 #endif

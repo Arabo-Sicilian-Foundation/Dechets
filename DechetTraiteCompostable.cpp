@@ -4,6 +4,7 @@
 
 DechetTraiteCompostable::DechetTraiteCompostable(Dechet* _dechet)
 {
+	dechet = _dechet;
 }
 
 

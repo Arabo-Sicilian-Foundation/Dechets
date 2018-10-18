@@ -4,7 +4,7 @@
 
 DechetTraiteNonRecyclable::DechetTraiteNonRecyclable(Dechet* _dechet)
 {
-	
+	dechet = _dechet;
 }
 
 

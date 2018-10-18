@@ -8,15 +8,17 @@
 class Camion
 {
 public:
+	Camion();
 	Camion(int _maxCapacite);
 	~Camion();
 	bool ajouterDechet(DechetTraite* _dechetTraite);
 	int viderCamion();
 
-private:
+protected:
 	int maxCapacite;
 	int capacite;
 	std::stack <DechetTraite*> pileDechets;
+
 
 };
 

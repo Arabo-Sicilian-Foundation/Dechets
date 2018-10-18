@@ -6,9 +6,10 @@
 class DechetTraite
 {
 public:
+	DechetTraite();
 	DechetTraite(Dechet* _dechet);
 	~DechetTraite();
-private:
+protected:
 	Dechet* dechet;
 };
 
