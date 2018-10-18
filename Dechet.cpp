@@ -90,3 +90,19 @@ void Dechet::setPurete(int purete)
 		this->purete = purete;
 	}
 }
+
+std::ostream & operator<<(std::ostream & out, Dechet const & dechet)
+{
+	out << "--------------------------" << std::endl;
+	out << "id          : " << dechet.getId() << std::endl;
+	out << "poids       : " << dechet.getPoids() << std::endl;
+	out << "description : " << dechet.getDescription() << std::endl;
+	out << "type        : " << dechet.getType() << std::endl;
+	out << "couleur     : " << dechet.getCouleur() << std::endl;
+	out << "materiel    : " << dechet.getMateriel() << std::endl;
+	out << "purete      : " << dechet.getPurete() << std::endl;
+	out << "styromousse : " << dechet.estEnStyromousse() << std::endl;
+	out << "rigide      : " << dechet.estRigide() << std::endl;
+
+	return out;
+}

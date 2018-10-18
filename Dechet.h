@@ -1,7 +1,9 @@
 #ifndef DECHET_H
 #define DECHET_H
 
+#include <iostream>
 #include <string>
+
 class Dechet
 {
 private:
@@ -28,7 +30,6 @@ private:
 	int purete;
 	bool styromousse;
 	bool rigide;
-	static int idCourant;
 
 	void setPoids(int poids);
 	void setDescription(std::string description);
@@ -39,6 +40,8 @@ private:
 public:
 	Dechet();
 	~Dechet();
+
+	static int idCourant;
 
 	int getPoids() const { return poids; }
 	int getId() const { return id; }
@@ -55,6 +58,8 @@ protected:
 	Dechet(int poids, std::string description);
 };
 
-int Dechet::idCourant = 0;
+
+
+std::ostream &operator<<(std::ostream &out, Dechet const &dechet);
 
 #endif
