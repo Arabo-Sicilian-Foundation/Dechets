@@ -2,8 +2,9 @@
 
 
 
-ChargementDechet::ChargementDechet()
+ChargementDechet::ChargementDechet(std::list <Dechet*>* _listeDechets)
 {
+
 }
 
 
