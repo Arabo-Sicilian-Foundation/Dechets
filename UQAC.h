@@ -8,7 +8,8 @@ class UQAC
 public:
 	UQAC();
 	~UQAC();
-	ChargementDechet* getChargementDechets();
+
+	ChargementDechet* getChargementDechets() const;
 };
 
 #endif
