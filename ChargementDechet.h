@@ -14,7 +14,7 @@ public:
 	ChargementDechet(std::list <Dechet*>* listeDechets);
 	~ChargementDechet();
 
-	Dechet* getDechet() const { return listeDechets.back(); }
+	Dechet* getDechet();
 };
 
 #endif

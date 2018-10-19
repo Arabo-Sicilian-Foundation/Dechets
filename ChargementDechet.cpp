@@ -14,3 +14,16 @@ ChargementDechet::ChargementDechet(std::list<Dechet*>* listeDechets)
 ChargementDechet::~ChargementDechet()
 {
 }
+
+Dechet* ChargementDechet::getDechet()
+{
+	Dechet* dechet;
+	if (!listeDechets.empty())
+	{
+		dechet = listeDechets.back();
+		listeDechets.pop_back();
+		return dechet;
+	}
+	else 
+		return NULL;
+}

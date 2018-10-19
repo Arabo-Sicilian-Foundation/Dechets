@@ -11,7 +11,7 @@
 #include <string>
 
 class UsineTraitement
-{
+{ 
 public:
 	/*
 	class Log
@@ -37,6 +37,8 @@ private:
 	CamionVert* camionVert;
 	CamionBleu* camionBleu;
 	CamionBrun* camionBrun;
+
+	friend class OperationTraitement;
 
 };
 

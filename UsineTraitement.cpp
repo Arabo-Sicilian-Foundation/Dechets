@@ -16,7 +16,13 @@ void UsineTraitement::chargerOperations(SequenceOperations* sequenceOperations)
 }
 void UsineTraitement::demarrerTraitements(ChargementDechet* chargement)
 {
-
+	Dechet* dechet;
+	while ((dechet = chargement->getDechet) != NULL)
+	{
+		traiterDechet(dechet);
+	}
+	delete chargement;
+	delete dechet;
 }
 
 void UsineTraitement::preOperation()
