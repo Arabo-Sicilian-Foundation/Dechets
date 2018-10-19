@@ -1,10 +1,13 @@
 #include "ChargementDechet.h"
 
 
-
-ChargementDechet::ChargementDechet(std::list <Dechet*>* _listeDechets)
+ChargementDechet::ChargementDechet(std::list<Dechet*>* listeDechets)
 {
-
+	while(!(listeDechets->empty()))
+	{
+		this->listeDechets.push_back(listeDechets->front());
+		listeDechets->pop_front();
+	}
 }
 
 

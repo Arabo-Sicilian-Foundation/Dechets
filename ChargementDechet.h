@@ -1,18 +1,20 @@
-#ifndef CHARGEMENTDECHET_H
-#define CHARGEMENTDECHET_H
+#ifndef CHERGEMENT_DECHET
+#define CHARGEMENT_DECHET
 
 #include <list>
 #include "Dechet.h"
 
-class ChargementDechet
+class ChargementDechet :
+	protected Dechet
 {
-public:
-	ChargementDechet(std::list <Dechet*>* _listeDechets);
-	~ChargementDechet();
-	Dechet* getDechet() const { return listeDechets };
 private:
-	Dechet* listeDechets;
+	std::list<Dechet*> listeDechets;
 
+public:
+	ChargementDechet(std::list <Dechet*>* listeDechets);
+	~ChargementDechet();
+
+	Dechet* getDechet() const { return listeDechets.back(); }
 };
 
 #endif
