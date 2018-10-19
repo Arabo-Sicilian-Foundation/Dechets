@@ -8,19 +8,22 @@
 #include "ChargementDechet.h"
 #include "SequenceOperations.h"
 #include "Depot.h"
+#include <iostream>
 #include <string>
+
+using namespace std;
 
 class UsineTraitement
 { 
 public:
-	/*
+	
 	class Log
 	{
 	public:
-		void i(std::string info);
-		void i(Dechet const& dechet);
-		void i(Depot const& depot);
-	};*/
+		static void i(string info) const { cout << info << endl; };
+		static void i(Dechet const& dechet) const {};
+		static void i(Depot const& depot) const {};
+	};
 	UsineTraitement();
 	~UsineTraitement();
 	void chargerOperations(SequenceOperations* sequenceOperations);

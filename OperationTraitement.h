@@ -8,6 +8,7 @@ class OperationTraitement :
 {
 public:
 	OperationTraitement(UsineTraitement* usineTraitement);
+	OperationTraitement();
 	~OperationTraitement();
 	bool effectuerOperation(Dechet* dechet);
 private:

@@ -20,3 +20,8 @@ void SequenceOperations::definirOperationDemarage(Operation* operation)
 {
 
 }
+
+Operation* SequenceOperations::getOperationDemarage()
+{
+	return operationDemarage;
+}

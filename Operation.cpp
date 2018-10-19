@@ -4,6 +4,8 @@
 
 Operation::Operation()
 {
+	operationSuivanteFalse = NULL;
+	operationSuivanteTrue = NULL;
 }
 
 

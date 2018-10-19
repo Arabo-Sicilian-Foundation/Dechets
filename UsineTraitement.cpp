@@ -27,23 +27,50 @@ void UsineTraitement::demarrerTraitements(ChargementDechet* chargement)
 
 void UsineTraitement::preOperation()
 {
-
+	Log::i("PREOPERATION");
 }
 void UsineTraitement::postOperation()
 {
-
+	Log::i("POSTOPERATION");
 }
 void UsineTraitement::creerDechetTraiteRecyclable(Dechet* dechet)
 {
-
+	if (camionBleu->ajouterDechet((DechetTraiteRecyclable*)dechet))
+	{
+		Log::i("AJOUT DTR" + to_string(dechet->getId()));
+	}
+	else
+	{
+		camionBleu->viderCamion();
+		camionBleu->ajouterDechet((DechetTraiteRecyclable*)dechet);
+		Log::i("AJOUT DTR" + to_string(dechet->getId()));
+	}
 }
 void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
 {
-
+	if (camionVert->ajouterDechet((DechetTraiteNonRecyclable*)dechet))
+	{
+		Log::i("AJOUT DTNR" + to_string(dechet->getId()));
+	}
+	else
+	{
+		camionVert->viderCamion();
+		camionVert->ajouterDechet((DechetTraiteNonRecyclable*)dechet);
+		Log::i("AJOUT DTNR" + to_string(dechet->getId()));
+	}
 }
 void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
 {
-
+	if (camionBrun->ajouterDechet((DechetTraiteCompostable*)dechet))
+	{
+		Log::i("AJOUT DTC" + to_string(dechet->getId()));
+	}
+	else
+	{
+		camionBrun->viderCamion();
+		camionBrun->ajouterDechet((DechetTraiteCompostable*)dechet);
+		Log::i("AJOUT DTC" + to_string(dechet->getId()));
+	}
 }
 void UsineTraitement::traiterDechet(Dechet* dechet)
 {
