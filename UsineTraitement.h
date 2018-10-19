@@ -7,12 +7,20 @@
 #include "Dechet.h"
 #include "ChargementDechet.h"
 #include "SequenceOperations.h"
-#include "Depot"
+#include "Depot.h"
 #include <string>
 
 class UsineTraitement
 {
 public:
+	/*
+	class Log
+	{
+	public:
+		void i(std::string info);
+		void i(Dechet const& dechet);
+		void i(Depot const& depot);
+	};*/
 	UsineTraitement();
 	~UsineTraitement();
 	void chargerOperations(SequenceOperations* sequenceOperations);

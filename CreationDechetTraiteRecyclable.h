@@ -7,7 +7,7 @@ class CreationDechetTraiteRecyclable :
 	public OperationTraitement
 {
 public:
-	CreationDechetTraiteRecyclable(UsineTraitement usineTraitment);
+	CreationDechetTraiteRecyclable(UsineTraitement* usineTraitment);
 	~CreationDechetTraiteRecyclable();
 	bool effectuerOperation(Dechet* dechet);
 };
