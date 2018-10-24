@@ -25,4 +25,6 @@ private:
 	int totalDTCompostable;
 };
 
+std::ostream & operator<<(std::ostream & out, Depot const & depot);
+
 #endif
