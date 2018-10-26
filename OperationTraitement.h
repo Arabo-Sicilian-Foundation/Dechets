@@ -12,7 +12,7 @@ public:
 	~OperationTraitement();
 	bool effectuerOperation(Dechet* dechet);
 private:
-	UsineTraitement* usineTraitment;
+	UsineTraitement* usineTraitement;
 protected:
 	void creerDechetTraiteRecyclable(Dechet* dechet);
 	void creerDechetTraiteNonRecyclable(Dechet* dechet);

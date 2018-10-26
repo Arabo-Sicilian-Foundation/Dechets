@@ -2,7 +2,7 @@
 
 
 
-CreationDechetTraiteCompostable::CreationDechetTraiteCompostable(UsineTraitement* usineTraitement)
+CreationDechetTraiteCompostable::CreationDechetTraiteCompostable(UsineTraitement* _usineTraitement)
 {
 }
 

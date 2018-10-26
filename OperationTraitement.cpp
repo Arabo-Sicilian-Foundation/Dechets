@@ -4,8 +4,9 @@ OperationTraitement::OperationTraitement()
 {
 }
 
-OperationTraitement::OperationTraitement(UsineTraitement* usineTraitement)
+OperationTraitement::OperationTraitement(UsineTraitement* _usineTraitement)
 {
+	usineTraitement = _usineTraitement;
 }
 
 
@@ -18,13 +19,13 @@ bool OperationTraitement::effectuerOperation(Dechet* dechet)
 }
 void OperationTraitement::creerDechetTraiteRecyclable(Dechet* dechet)
 {
-
+	usineTraitement->creerDechetTraiteRecyclable(dechet);
 }
 void OperationTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
 {
-
+	usineTraitement->creerDechetTraiteNonRecyclable(dechet);
 }
 void OperationTraitement::creerDechetTraiteCompostable(Dechet* dechet)
 {
-
+	usineTraitement->creerDechetTraiteCompostable(dechet);
 }
