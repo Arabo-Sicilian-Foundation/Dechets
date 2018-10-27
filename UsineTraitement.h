@@ -1,17 +1,10 @@
 #ifndef USINETRAITEMENT_H
 #define USINETRAITEMENT_H
 
-#include "CamionBleu.h"
-#include "CamionBrun.h"
-#include "CamionVert.h"
-#include "Dechet.h"
 #include "ChargementDechet.h"
 #include "SequenceOperations.h"
 #include "Depot.h"
-#include <iostream>
-#include <string>
-
-using namespace std;
+#include <stddef.h>
 
 class UsineTraitement
 { 
@@ -20,9 +13,9 @@ public:
 	class Log
 	{
 	public:
-		static void i(string info) const { cout << info << endl; };
-		static void i(Dechet const& dechet) const {};
-		static void i(Depot const& depot) const {};
+		void i(std::string info) const { std::cout << info << std::endl; };
+		void i(Dechet const& dechet) {};
+		void i(Depot const& depot) {};
 	};
 	UsineTraitement();
 	~UsineTraitement();

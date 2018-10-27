@@ -18,7 +18,7 @@ void UsineTraitement::chargerOperations(SequenceOperations* _sequenceOperations)
 void UsineTraitement::demarrerTraitements(ChargementDechet* chargement)
 {
 	Dechet* dechet;
-	while ((dechet = chargement->getDechet) != NULL)
+	while ((dechet = chargement->getDechet()) != NULL)
 	{
 		traiterDechet(dechet);
 	}
@@ -40,13 +40,13 @@ void UsineTraitement::creerDechetTraiteRecyclable(Dechet* dechet)
 	Log log;
 	if (camionBleu->ajouterDechet((DechetTraiteRecyclable*)dechet))
 	{
-		log.i("AJOUT DTR" + to_string(dechet->getId()));
+		log.i("AJOUT DTR" + std::to_string(dechet->getId()));
 	}
 	else
 	{
 		camionBleu->viderCamion();
 		camionBleu->ajouterDechet((DechetTraiteRecyclable*)dechet);
-		log.i("AJOUT DTR" + to_string(dechet->getId()));
+		log.i("AJOUT DTR" + std::to_string(dechet->getId()));
 	}
 }
 void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
@@ -54,13 +54,13 @@ void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
 	Log log;
 	if (camionVert->ajouterDechet((DechetTraiteNonRecyclable*)dechet))
 	{
-		log.i("AJOUT DTNR" + to_string(dechet->getId()));
+		log.i("AJOUT DTNR" + std::to_string(dechet->getId()));
 	}
 	else
 	{
 		camionVert->viderCamion();
 		camionVert->ajouterDechet((DechetTraiteNonRecyclable*)dechet);
-		log.i("AJOUT DTNR" + to_string(dechet->getId()));
+		log.i("AJOUT DTNR" + std::to_string(dechet->getId()));
 	}
 }
 void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
@@ -68,13 +68,13 @@ void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
 	Log log;
 	if (camionBrun->ajouterDechet((DechetTraiteCompostable*)dechet))
 	{
-		log.i("AJOUT DTC" + to_string(dechet->getId()));
+		log.i("AJOUT DTC" + std::to_string(dechet->getId()));
 	}
 	else
 	{
 		camionBrun->viderCamion();
 		camionBrun->ajouterDechet((DechetTraiteCompostable*)dechet);
-		log.i("AJOUT DTC" + to_string(dechet->getId()));
+		log.i("AJOUT DTC" + std::to_string(dechet->getId()));
 	}
 }
 void UsineTraitement::traiterDechet(Dechet* dechet)

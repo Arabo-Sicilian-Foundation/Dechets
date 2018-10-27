@@ -1,5 +1,5 @@
-#ifndef CHERGEMENT_DECHET
-#define CHARGEMENT_DECHET
+#ifndef CHERGEMENT_DECHET_H
+#define CHARGEMENT_DECHET_H
 
 #include <list>
 #include "Dechet.h"

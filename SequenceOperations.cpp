@@ -13,6 +13,7 @@ SequenceOperations::~SequenceOperations()
 
 SequenceOperations* SequenceOperations::ajouterOperation(Operation* operation)
 {
+	return NULL;
 
 }
 

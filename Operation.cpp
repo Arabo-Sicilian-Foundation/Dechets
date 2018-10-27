@@ -21,7 +21,7 @@ Operation::Operation(Operation* _operationSuivanteTrue, Operation* _operationSui
 
 bool Operation::effectuerOperation(Dechet* dechet)
 {
-	 
+	return 0;
 }
 
 Operation* Operation::getOperationSuivante(bool choix)

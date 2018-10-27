@@ -1,5 +1,5 @@
-#ifndef PLANTEVERTE
-#define PLANTEVERTE
+#ifndef PLANTEVERTE_H
+#define PLANTEVERTE_H
 
 #include "Dechet.h"
 

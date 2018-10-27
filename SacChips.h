@@ -1,5 +1,5 @@
-#ifndef SACCHIPS
-#define SACCHIPS
+#ifndef SACCHIPS_H
+#define SACCHIPS_H
 
 #include "Dechet.h"
 

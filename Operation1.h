@@ -1,8 +1,9 @@
-#ifndef OPERATION1
-#define OPERATION1
+#ifndef OPERATION1_H
+#define OPERATION1_H
 
 #include "Operation.h"
-class Operation1 :
+
+class Operation1 : 
 	public Operation
 {
 public:

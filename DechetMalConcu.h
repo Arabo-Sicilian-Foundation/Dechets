@@ -1,5 +1,5 @@
-#ifndef DECHETMALCONCU
-#define DECHETMALCONCU
+#ifndef DECHETMALCONCU_H
+#define DECHETMALCONCU_H
 
 #include "Dechet.h"
 

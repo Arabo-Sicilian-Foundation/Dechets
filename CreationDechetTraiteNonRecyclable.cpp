@@ -2,8 +2,9 @@
 
 
 
-CreationDechetTraiteNonRecyclable::CreationDechetTraiteNonRecyclable(UsineTraitement* usineTraitement)
+CreationDechetTraiteNonRecyclable::CreationDechetTraiteNonRecyclable(UsineTraitement* _usineTraitement)
 {
+	usineTraitement = _usineTraitement;
 }
 
 

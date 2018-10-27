@@ -2,7 +2,6 @@
 #define GENERATEURSEQUENCEOPERATIONS_H
 
 #include "UsineTraitement.h"
-#include "SequenceOperations.h"
 #include "CreationDechetTraiteCompostable.h"
 #include "CreationDechetTraiteNonRecyclable.h"
 #include "CreationDechetTraiteRecyclable.h"

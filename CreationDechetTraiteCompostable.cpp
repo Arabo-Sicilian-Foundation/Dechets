@@ -4,6 +4,7 @@
 
 CreationDechetTraiteCompostable::CreationDechetTraiteCompostable(UsineTraitement* _usineTraitement)
 {
+	usineTraitement = _usineTraitement;
 }
 
 

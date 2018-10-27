@@ -1,5 +1,5 @@
-#ifndef CHAISE
-#define CHAISE
+#ifndef CHAISE_H
+#define CHAISE_H
 
 #include "Dechet.h"
 

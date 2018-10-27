@@ -1,5 +1,5 @@
-#ifndef BOITECARTON
-#define BOITECARTON
+#ifndef BOITECARTON_H
+#define BOITECARTON_H
 
 #include "Dechet.h"
 

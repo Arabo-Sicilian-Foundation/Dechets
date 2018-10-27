@@ -5,8 +5,8 @@
 #include <string>
 
 class Dechet
-{
-private:
+{ 
+public:
 	enum Materiel
 	{
 		CARTON,
@@ -20,6 +20,8 @@ private:
 		STYROMOAF,
 		INCONNU
 	};
+private:
+
 
 	int poids;
 	int id;
@@ -37,7 +39,10 @@ private:
 	void setCouleur(std::string couleur);
 	void setPurete(int purete);
 
+	friend class UQAC;
+
 public:
+
 	Dechet();
 	~Dechet();
 

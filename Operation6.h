@@ -1,7 +1,8 @@
-#ifndef OPERATION6
-#define OPERATION6
+#ifndef OPERATION6_H
+#define OPERATION6_H
 
 #include "Operation.h"
+
 class Operation6 :
 	public Operation
 {

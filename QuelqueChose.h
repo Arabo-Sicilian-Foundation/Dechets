@@ -1,5 +1,5 @@
-#ifndef QQCH
-#define QQCH
+#ifndef QQCH_H
+#define QQCH_H
 
 #include "Dechet.h"
 

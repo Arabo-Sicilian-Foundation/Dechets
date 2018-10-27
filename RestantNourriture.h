@@ -1,5 +1,5 @@
-#ifndef RESTANT_NOUTRRITTURE
-#define RESTANT_NOURRITURE
+#ifndef RESTANT_NOUTRRITTURE_H
+#define RESTANT_NOURRITURE_H
 
 #include "Dechet.h"
 

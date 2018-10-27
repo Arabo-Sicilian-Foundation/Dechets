@@ -1,5 +1,5 @@
-#ifndef FEUILLEPAPIER
-#define FEUILLEPAPIER
+#ifndef FEUILLEPAPIER_H
+#define FEUILLEPAPIER_H
 
 #include "Dechet.h"
 

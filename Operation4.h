@@ -1,5 +1,5 @@
-#ifndef OPERATION4
-#define OPERATION4
+#ifndef OPERATION4_H
+#define OPERATION4_H
 
 #include "Operation.h"
 class Operation4 :

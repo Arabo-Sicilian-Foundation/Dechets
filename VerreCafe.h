@@ -1,5 +1,5 @@
-#ifndef VERRECAFE
-#define VERRECAFE
+#ifndef VERRECAFE_H
+#define VERRECAFE_H
 
 #include "Dechet.h"
 

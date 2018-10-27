@@ -1,5 +1,5 @@
-#ifndef BOUTEILLEBIERE
-#define BOUTEILLEBIERE
+#ifndef BOUTEILLEBIERE_H
+#define BOUTEILLEBIERE_H
 
 #include "Dechet.h"
 

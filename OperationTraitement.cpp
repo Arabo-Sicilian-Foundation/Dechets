@@ -15,7 +15,7 @@ OperationTraitement::~OperationTraitement()
 }
 bool OperationTraitement::effectuerOperation(Dechet* dechet)
 {
-
+	return 0;
 }
 void OperationTraitement::creerDechetTraiteRecyclable(Dechet* dechet)
 {

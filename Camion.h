@@ -1,7 +1,6 @@
 #ifndef CAMION_H
 #define CAMION_H
 
-#include <iostream>
 #include <stack>
 #include "DechetTraite.h"
 
