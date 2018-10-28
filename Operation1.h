@@ -9,7 +9,7 @@ class Operation1 :
 public:
 	Operation1(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse);
 	~Operation1();
-	bool effectuerOperation(Dechet* dechet);
+	virtual bool effectuerOperation(Dechet* dechet);
 };
 
 #endif

@@ -1,11 +1,4 @@
 #include "GenerateurSequenceOperations.h"
-#include "Operation1.h"
-#include "Operation2.h"
-#include "Operation3.h"
-#include "Operation4.h"
-#include "Operation5.h"
-#include "Operation6.h"
-
 
 GenerateurSequenceOperations::GenerateurSequenceOperations()
 {
@@ -22,7 +15,13 @@ SequenceOperations* GenerateurSequenceOperations::genererSequence(int id, UsineT
 	CreationDechetTraiteCompostable* dc = new CreationDechetTraiteCompostable(usineTraitement);
 	CreationDechetTraiteNonRecyclable* dnr = new CreationDechetTraiteNonRecyclable(usineTraitement);
 	CreationDechetTraiteRecyclable* dr = new CreationDechetTraiteRecyclable(usineTraitement);
-	Operation1* op1 = new Operation1(dnr, new Operation2(new Operation6(dnr, dr), new Operation3(dr, new Operation4(dc, new Operation5(dc, dnr)))));
+	Operation6* op6 = new Operation6(dnr, dr);
+	Operation5* op5 = new Operation5(dc, dnr);
+	Operation4* op4 = new Operation4(dc, op5);
+	Operation3* op3 = new Operation3(dr, op4);
+	Operation2* op2 = new Operation2(op6, op3);
+	Operation1* op1 = new Operation1(dnr, op2);
+
 	sequenceOperation->definirOperationDemarage(op1);
 
 	return sequenceOperation;

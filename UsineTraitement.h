@@ -1,6 +1,7 @@
 #ifndef USINETRAITEMENT_H
 #define USINETRAITEMENT_H
 
+#include "Operation1.h"
 #include "ChargementDechet.h"
 #include "SequenceOperations.h"
 #include "Depot.h"

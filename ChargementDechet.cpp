@@ -3,7 +3,7 @@
 
 ChargementDechet::ChargementDechet(std::list<Dechet*>* listeDechets)
 {
-	while(!(listeDechets->empty()))
+	while (!(listeDechets->empty()))
 	{
 		this->listeDechets.push_back(listeDechets->front());
 		listeDechets->pop_front();
@@ -24,6 +24,6 @@ Dechet* ChargementDechet::getDechet()
 		listeDechets.pop_back();
 		return dechet;
 	}
-	else 
+	else
 		return NULL;
 }

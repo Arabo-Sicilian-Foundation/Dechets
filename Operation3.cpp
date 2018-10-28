@@ -13,6 +13,8 @@ Operation3::~Operation3()
 
 bool Operation3::effectuerOperation(Dechet* dechet)
 {
+
+	std::cout << "op3" << std::endl;
 	if (dechet->getMateriel() == 0 || dechet->getMateriel() == 7)
 		return true;
 	else

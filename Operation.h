@@ -1,7 +1,7 @@
 #ifndef OPERATION_H
 #define OPERATION_H
 
-#include "Dechet.h"
+#include "DechetTraite.h"
 
 class Operation
 {
@@ -10,7 +10,7 @@ protected:
 public:
 	Operation(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse);
 	~Operation();
-	bool effectuerOperation(Dechet* dechet);
+	virtual bool effectuerOperation(Dechet* dechet);
 	Operation* getOperationSuivante(bool choix);
 private:
 	Operation* operationSuivanteTrue;

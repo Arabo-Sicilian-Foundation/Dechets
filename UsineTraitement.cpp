@@ -1,7 +1,5 @@
 #include "UsineTraitement.h"
 
-
-
 UsineTraitement::UsineTraitement()
 {
 }
@@ -83,6 +81,7 @@ void UsineTraitement::traiterDechet(Dechet* dechet)
 	bool choix;
 	do
 	{
+		std::cout << dechet->getId() << std::endl;
 		choix = operation->effectuerOperation(dechet);
 		operation = operation->getOperationSuivante(choix);
 	} while (operation != NULL);

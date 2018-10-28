@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include <string>
+#include <list>
 
 class Dechet
 { 
+
 public:
 	enum Materiel
 	{
@@ -39,7 +41,6 @@ private:
 	void setCouleur(std::string couleur);
 	void setPurete(int purete);
 
-	friend class UQAC;
 
 public:
 
@@ -57,9 +58,9 @@ public:
 	int getPurete() const { return purete; }
 	bool estEnStyromousse() const { return styromousse; }
 	bool estRigide() const { return rigide; }
+	Dechet(int poids, std::string description, int type, std::string couleur, Materiel materiel, int purete, bool estEnStyromousse, bool rigide);
 
 protected:
-	Dechet(int poids, std::string description, int type, std::string couleur, Materiel materiel, int purete, bool estEnStyromousse, bool rigide);
 	Dechet(int poids, std::string description);
 };
 

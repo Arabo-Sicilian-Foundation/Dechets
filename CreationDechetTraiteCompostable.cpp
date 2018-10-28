@@ -14,6 +14,8 @@ CreationDechetTraiteCompostable::~CreationDechetTraiteCompostable()
 
 bool CreationDechetTraiteCompostable::effectuerOperation(Dechet* dechet)
 {
+
+	std::cout << "dc" << std::endl;
 	creerDechetTraiteCompostable(dechet);
 	return true;
 }

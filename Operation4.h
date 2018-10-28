@@ -8,7 +8,7 @@ class Operation4 :
 public:
 	Operation4(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse);
 	~Operation4();
-	bool effectuerOperation(Dechet* dechet);
+	virtual bool effectuerOperation(Dechet* dechet);
 };
 
 #endif

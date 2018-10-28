@@ -14,6 +14,8 @@ CreationDechetTraiteRecyclable::~CreationDechetTraiteRecyclable()
 
 bool CreationDechetTraiteRecyclable::effectuerOperation(Dechet* dechet)
 {
+
+	std::cout << "dr" << std::endl;
 	creerDechetTraiteRecyclable(dechet);
 	return true;
 }

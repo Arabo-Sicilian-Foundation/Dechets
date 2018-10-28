@@ -14,6 +14,8 @@ CreationDechetTraiteNonRecyclable::~CreationDechetTraiteNonRecyclable()
 
 bool CreationDechetTraiteNonRecyclable::effectuerOperation(Dechet* dechet)
 {
+
+	std::cout << "dnr" << std::endl;
 	creerDechetTraiteCompostable(dechet);
 	return true;
 }

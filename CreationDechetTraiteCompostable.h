@@ -3,6 +3,7 @@
 
 #include "OperationTraitement.h"
 
+
 class CreationDechetTraiteCompostable :
 	public OperationTraitement
 {
