@@ -6,6 +6,11 @@ CamionBrun::CamionBrun()
 {
 }
 
+CamionBrun::CamionBrun(int _maxCapacite)
+{
+	maxCapacite = _maxCapacite;
+	capacite = 0;
+}
 
 CamionBrun::~CamionBrun()
 {

@@ -6,6 +6,11 @@ CamionBleu::CamionBleu()
 {
 }
 
+CamionBleu::CamionBleu(int _maxCapacite)
+{
+	maxCapacite = _maxCapacite;
+	capacite = 0;
+}
 
 CamionBleu::~CamionBleu() 
 {

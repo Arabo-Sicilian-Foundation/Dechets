@@ -2,6 +2,9 @@
 
 UsineTraitement::UsineTraitement()
 {
+	camionVert = new CamionVert(10);
+	camionBleu = new CamionBleu(10);
+	camionBrun = new CamionBrun(10);
 }
 
 
@@ -36,13 +39,15 @@ void UsineTraitement::postOperation()
 void UsineTraitement::creerDechetTraiteRecyclable(Dechet* dechet)
 {
 	Log log;
+	int poid;
 	if (camionBleu->ajouterDechet((DechetTraiteRecyclable*)dechet))
 	{
 		log.i("AJOUT DTR" + std::to_string(dechet->getId()));
 	}
 	else
 	{
-		camionBleu->viderCamion();
+		poid = camionBleu->viderCamion();
+		log.i("Camion bleu vide de " + std::to_string(poid) + "kg");
 		camionBleu->ajouterDechet((DechetTraiteRecyclable*)dechet);
 		log.i("AJOUT DTR" + std::to_string(dechet->getId()));
 	}
@@ -50,13 +55,15 @@ void UsineTraitement::creerDechetTraiteRecyclable(Dechet* dechet)
 void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
 {
 	Log log;
+	int poid;
 	if (camionVert->ajouterDechet((DechetTraiteNonRecyclable*)dechet))
 	{
 		log.i("AJOUT DTNR" + std::to_string(dechet->getId()));
 	}
 	else
 	{
-		camionVert->viderCamion();
+		poid = camionVert->viderCamion();
+		log.i("Camion vert vide de " + std::to_string(poid) + "kg");
 		camionVert->ajouterDechet((DechetTraiteNonRecyclable*)dechet);
 		log.i("AJOUT DTNR" + std::to_string(dechet->getId()));
 	}
@@ -64,13 +71,15 @@ void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
 void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
 {
 	Log log;
+	int poid;
 	if (camionBrun->ajouterDechet((DechetTraiteCompostable*)dechet))
 	{
 		log.i("AJOUT DTC" + std::to_string(dechet->getId()));
 	}
 	else
 	{
-		camionBrun->viderCamion();
+		poid = camionBrun->viderCamion();
+		log.i("Camion brun vide de " + std::to_string(poid) + "kg");
 		camionBrun->ajouterDechet((DechetTraiteCompostable*)dechet);
 		log.i("AJOUT DTC" + std::to_string(dechet->getId()));
 	}
@@ -79,11 +88,13 @@ void UsineTraitement::traiterDechet(Dechet* dechet)
 {
 	Operation* operation = sequenceOperations->getOperationDemarage();
 	bool choix;
+	std::cout << "Dechet numero " << dechet->getId() << std::endl;
+	preOperation();
 	do
 	{
-		std::cout << dechet->getId() << std::endl;
 		choix = operation->effectuerOperation(dechet);
 		operation = operation->getOperationSuivante(choix);
 	} while (operation != NULL);
-
+	postOperation();
+	std::cout << std::endl;
 }

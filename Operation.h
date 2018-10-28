@@ -12,7 +12,7 @@ public:
 	~Operation();
 	virtual bool effectuerOperation(Dechet* dechet);
 	Operation* getOperationSuivante(bool choix);
-private:
+protected:
 	Operation* operationSuivanteTrue;
 	Operation* operationSuivanteFalse;
 

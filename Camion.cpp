@@ -21,6 +21,7 @@ bool Camion::ajouterDechet(DechetTraite* _dechetTraite)
 {
 	if (capacite < maxCapacite)
 	{
+		capacite++;
 		pileDechets.push(_dechetTraite);
 		return true;
 	}
@@ -38,5 +39,6 @@ int Camion::viderCamion()
 		poidTotal += dechet->getPoids();
 		pileDechets.pop();
 	}
+	capacite = 0;
 	return poidTotal;
 }

@@ -9,6 +9,7 @@ class CamionBleu :
 {
 public:
 	CamionBleu();
+	CamionBleu(int _maxCapacite);
 	~CamionBleu();
 	bool ajouterDechet(DechetTraiteRecyclable* _dechetTraite);
 };

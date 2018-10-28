@@ -9,6 +9,7 @@ class CamionVert :
 {
 public:
 	CamionVert();
+	CamionVert(int _maxCapacite);
 	~CamionVert();
 	bool ajouterDechetTraite(DechetTraiteNonRecyclable* _dechetTraite);
 };
