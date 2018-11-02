@@ -4,12 +4,13 @@
 
 UQAC::UQAC()
 {
-
+	Dechet::memoire++;
 }
  
 
 UQAC::~UQAC()
 {
+	Dechet::memoire--;
 }
 
 ChargementDechet * UQAC::getChargementDechets() const
@@ -29,8 +30,6 @@ ChargementDechet * UQAC::getChargementDechets() const
 		listeDechet.push_back(dechet3);
 		listeDechet.push_back(dechet4);
 		listeDechet.push_back(dechet5);
-		
-
 	}
 	
 	ChargementDechet* cd = new ChargementDechet(&listeDechet);

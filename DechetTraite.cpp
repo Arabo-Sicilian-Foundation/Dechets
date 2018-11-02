@@ -3,15 +3,18 @@
 
 DechetTraite::DechetTraite()
 {
+	Dechet::memoire++;
 }
 
 
-DechetTraite::DechetTraite(Dechet* _dechet)
+DechetTraite::DechetTraite(Dechet* dechet)
 {
-	dechet = _dechet;
+	Dechet::memoire++;
+	this->dechet = dechet;
 }
 
 
 DechetTraite::~DechetTraite()
 {
+	Dechet::memoire--;
 }

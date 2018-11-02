@@ -3,6 +3,8 @@
 
 ChargementDechet::ChargementDechet(std::list<Dechet*>* listeDechets)
 {
+	Dechet::memoire++;
+
 	while (!(listeDechets->empty()))
 	{
 		this->listeDechets.push_back(listeDechets->front());
@@ -13,6 +15,7 @@ ChargementDechet::ChargementDechet(std::list<Dechet*>* listeDechets)
 
 ChargementDechet::~ChargementDechet()
 {
+	Dechet::memoire--;
 }
 
 Dechet* ChargementDechet::getDechet()

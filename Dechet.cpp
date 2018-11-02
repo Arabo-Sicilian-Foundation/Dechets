@@ -4,6 +4,7 @@
 Dechet::Dechet()
 {
 	idCourant++;
+	memoire++;
 
 	id = idCourant;
 	setPoids(0);
@@ -19,11 +20,13 @@ Dechet::Dechet()
 
 Dechet::~Dechet()
 {
+	memoire--;
 }
 
 Dechet::Dechet(int poids, std::string description, int type, std::string couleur, Materiel materiel, int purete, bool estEnStyromousse, bool rigide)
 {
 	idCourant++;
+	memoire++;
 	
 	id = idCourant;
 	setPoids(poids);
@@ -93,16 +96,16 @@ void Dechet::setPurete(int purete)
 
 std::ostream & operator<<(std::ostream & out, Dechet const & dechet)
 {
-	out << "--------------------------" << std::endl;
-	out << "id          : " << dechet.getId() << std::endl;
-	out << "poids       : " << dechet.getPoids() << std::endl;
-	out << "description : " << dechet.getDescription() << std::endl;
-	out << "type        : " << dechet.getType() << std::endl;
-	out << "couleur     : " << dechet.getCouleur() << std::endl;
-	out << "materiel    : " << dechet.getMateriel() << std::endl;
-	out << "purete      : " << dechet.getPurete() << std::endl;
-	out << "styromousse : " << dechet.estEnStyromousse() << std::endl;
-	out << "rigide      : " << dechet.estRigide() << std::endl;
+	out << "--------------------------" << std::endl
+		<< "id          : " << dechet.getId() << std::endl
+		<< "poids       : " << dechet.getPoids() << std::endl
+		<< "description : " << dechet.getDescription() << std::endl
+		<< "type        : " << dechet.getType() << std::endl
+		<< "couleur     : " << dechet.getCouleur() << std::endl
+		<< "materiel    : " << dechet.getMateriel() << std::endl
+		<< "purete      : " << dechet.getPurete() << std::endl
+		<< "styromousse : " << dechet.estEnStyromousse() << std::endl
+		<< "rigide      : " << dechet.estRigide() << std::endl;
 
 	return out;
 }

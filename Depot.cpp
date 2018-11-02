@@ -4,11 +4,13 @@
 
 Depot::Depot()
 {
+	Dechet::memoire++;
 }
 
 
 Depot::~Depot()
 {
+	Dechet::memoire--;
 }
 
 void Depot::depotDechetsTraites(CamionVert* _camion)

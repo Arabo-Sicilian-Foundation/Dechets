@@ -4,17 +4,18 @@
 
 SequenceOperations::SequenceOperations()
 {
+	Dechet::memoire++;
 }
 
 
 SequenceOperations::~SequenceOperations()
 {
+	Dechet::memoire--;
 }
 
 SequenceOperations* SequenceOperations::ajouterOperation(Operation* operation)
 {
 	return NULL;
-
 }
 
 void SequenceOperations::definirOperationDemarage(Operation* operation)

@@ -5,10 +5,10 @@
 using namespace std;
 
 int Dechet::idCourant = 0;
+int Dechet::memoire = 0;
 
 void laboratoire2()
 {
-	int i;
 	SequenceOperations* sqop = new SequenceOperations;
 	UQAC* uqac = new UQAC;
 	ChargementDechet* chargement = uqac->getChargementDechets();
@@ -20,19 +20,20 @@ void laboratoire2()
 
 
 	usineTraitement->chargerOperations(gso.genererSequence(0, usineTraitement));
-	cout << "here" << endl;
 	usineTraitement->demarrerTraitements(chargement);
 
 	delete usineTraitement;
 	delete uqac;
-
-	cin >> i;
-
+	delete sqop;
+	delete op1;
+	delete op2;
+	delete op3;
 }
 int main()
 {
+	int i;
 	laboratoire2();
-
-
+	cout << "fuites de memoires : " << Dechet::memoire << endl;
+	cin >> i;
 	return 0;
 }

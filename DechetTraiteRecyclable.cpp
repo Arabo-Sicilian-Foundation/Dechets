@@ -2,12 +2,15 @@
 
 
 
-DechetTraiteRecyclable::DechetTraiteRecyclable(Dechet* _dechet)
+DechetTraiteRecyclable::DechetTraiteRecyclable(Dechet* dechet)
 {
-	dechet = _dechet;
+	Dechet::memoire++;
+
+	this->dechet = dechet;
 }
 
 
 DechetTraiteRecyclable::~DechetTraiteRecyclable()
 {
+	Dechet::memoire--;
 }

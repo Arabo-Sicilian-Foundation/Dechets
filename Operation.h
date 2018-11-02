@@ -9,7 +9,7 @@ protected:
 	Operation();
 public:
 	Operation(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse);
-	~Operation();
+	virtual ~Operation();
 	virtual bool effectuerOperation(Dechet* dechet);
 	Operation* getOperationSuivante(bool choix);
 protected:

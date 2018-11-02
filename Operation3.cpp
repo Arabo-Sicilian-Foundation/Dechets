@@ -4,6 +4,8 @@
 
 Operation3::Operation3(Operation* _operationSuivanteTrue, Operation* _operationSuivanteFalse)
 {
+	Dechet::memoire++;
+
 	operationSuivanteFalse = _operationSuivanteFalse;
 	operationSuivanteTrue = _operationSuivanteTrue;
 }
@@ -11,6 +13,7 @@ Operation3::Operation3(Operation* _operationSuivanteTrue, Operation* _operationS
 
 Operation3::~Operation3()
 {
+	Dechet::memoire--;
 }
 
 bool Operation3::effectuerOperation(Dechet* dechet)

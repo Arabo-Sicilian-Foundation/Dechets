@@ -2,6 +2,8 @@
 
 UsineTraitement::UsineTraitement()
 {
+	Dechet::memoire++;
+
 	camionVert = new CamionVert(10);
 	camionBleu = new CamionBleu(10);
 	camionBrun = new CamionBrun(10);
@@ -10,7 +12,9 @@ UsineTraitement::UsineTraitement()
 
 UsineTraitement::~UsineTraitement()
 {
+	Dechet::memoire--;
 }
+
 void UsineTraitement::chargerOperations(SequenceOperations* _sequenceOperations)
 {
 	sequenceOperations = _sequenceOperations;
@@ -23,6 +27,10 @@ void UsineTraitement::demarrerTraitements(ChargementDechet* chargement)
 	{
 		traiterDechet(dechet);
 	}
+	this->camionBleu->viderCamion();
+	this->camionBrun->viderCamion();
+	this->camionVert->viderCamion();
+
 	delete chargement;
 }
 

@@ -4,6 +4,8 @@
 
 Operation::Operation()
 {
+	Dechet::memoire++;
+
 	operationSuivanteFalse = NULL;
 	operationSuivanteTrue = NULL;
 }
@@ -11,17 +13,19 @@ Operation::Operation()
 
 Operation::~Operation()
 {
+	Dechet::memoire--;
 }
 
 Operation::Operation(Operation* _operationSuivanteTrue, Operation* _operationSuivanteFalse)
 {
+	Dechet::memoire++;
+
 	operationSuivanteFalse = _operationSuivanteFalse;
 	operationSuivanteTrue = _operationSuivanteTrue;
 }
 
 bool Operation::effectuerOperation(Dechet* dechet)
 {
-
 	return 0;
 }
 

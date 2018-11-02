@@ -9,6 +9,8 @@ class Dechet
 { 
 
 public:
+	static int memoire;
+
 	enum Materiel
 	{
 		CARTON,

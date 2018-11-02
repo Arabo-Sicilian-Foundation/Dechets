@@ -2,11 +2,13 @@
 
 GenerateurSequenceOperations::GenerateurSequenceOperations()
 {
+	Dechet::memoire++;
 }
 
 
 GenerateurSequenceOperations::~GenerateurSequenceOperations()
 {
+	Dechet::memoire--;
 }
 
 SequenceOperations* GenerateurSequenceOperations::genererSequence(int id, UsineTraitement* usineTraitement)
@@ -21,8 +23,10 @@ SequenceOperations* GenerateurSequenceOperations::genererSequence(int id, UsineT
 	Operation3* op3 = new Operation3(dr, op4);
 	Operation2* op2 = new Operation2(op6, op3);
 	Operation1* op1 = new Operation1(dnr, op2);
-
 	sequenceOperation->definirOperationDemarage(op1);
+
+	delete op6;
+	delete dc;
 
 	return sequenceOperation;
 }
@@ -35,6 +39,7 @@ SequenceOperations* GenerateurSequenceOperations::genererSequence0(UsineTraiteme
 	CreationDechetTraiteRecyclable* dr = new CreationDechetTraiteRecyclable(usineTraitement);
 	Operation1* op1 = new Operation1(dnr, new Operation2(new Operation6(dnr, dr), new Operation3(dr, new Operation4(dc, new Operation5(dc, dnr)))));
 	sequenceOperation->definirOperationDemarage(op1);
+
 	return sequenceOperation;
 }
 
@@ -46,5 +51,6 @@ SequenceOperations* GenerateurSequenceOperations::genererSequence1(UsineTraiteme
 	CreationDechetTraiteRecyclable* dr = new CreationDechetTraiteRecyclable(usineTraitement);
 	Operation1* op1 = new Operation1(dnr, new Operation2(new Operation6(dnr, dr), new Operation3(dr, new Operation4(dc, new Operation5(dc, dnr)))));
 	sequenceOperation->definirOperationDemarage(op1);
+
 	return sequenceOperation;
 }

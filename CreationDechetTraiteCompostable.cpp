@@ -2,19 +2,21 @@
 
 
 
-CreationDechetTraiteCompostable::CreationDechetTraiteCompostable(UsineTraitement* _usineTraitement)
+CreationDechetTraiteCompostable::CreationDechetTraiteCompostable(UsineTraitement* usineTraitement)
 {
-	usineTraitement = _usineTraitement;
+	Dechet::memoire++;
+
+	this->usineTraitement = usineTraitement;
 }
 
 
 CreationDechetTraiteCompostable::~CreationDechetTraiteCompostable()
 {
+	Dechet::memoire--;
 }
 
 bool CreationDechetTraiteCompostable::effectuerOperation(Dechet* dechet)
 {
-
 	creerDechetTraiteCompostable(dechet);
 	return true;
 }
